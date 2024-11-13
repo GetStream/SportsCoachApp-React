@@ -1,0 +1,3 @@
+.str-chat {
+	--str-chat__message-input-tools-color: var(--str-chat__primary-surface-color);
+}

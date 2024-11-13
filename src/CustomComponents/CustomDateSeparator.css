@@ -1,0 +1,16 @@
+.custom__date-separator {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+}
+
+.custom__date-separator__date {
+	padding: 5px 8px;
+	font-weight: 600;
+	background-color: #72767f;
+	color: white;
+	border-radius: 999px;
+	font-size: 13px;
+}

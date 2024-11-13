@@ -1,0 +1,23 @@
+.custom__channel-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.custom__channel-header__info-button {
+	border: none;
+	background: transparent;
+	padding: 1px;
+	margin: var(--str-chat__spacing-2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 27px;
+	border-radius: 9999px;
+	cursor: pointer;
+}
+
+.custom__channel-header__info-button .str-chat__icon {
+	--str-chat-icon-color: var(--str-chat__primary-surface-color);
+	height: 100%;
+}

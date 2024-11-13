@@ -1,0 +1,113 @@
+.str-chat {
+	--str-chat__primary-surface-color: #0074c6;
+	--str-chat__primary-color: #0273c5;
+	--str-chat__primary-surface-color-low-emphasis: #aacbe4;
+	--str-chat__message-reactions-option-selected-background-color: #aacbe4;
+	--str-chat__tertiary-surface-color: #f2f2f2;
+
+	--str-chat__own-message-bubble-color: #fff;
+	--str-chat__image-attachment-background-color: transparent;
+
+	--str-chat__message-reaction-border-radius: 18px;
+
+	--str-chat__text-low-emphasis-color: #8d8d93;
+}
+
+.custom__message-author-name {
+	grid-area: author-name;
+	display: none;
+	font-size: 12px;
+	font-weight: 600;
+	color: #71757f;
+	padding-inline: 5px;
+}
+
+.str-chat__message .str-chat__message-bubble {
+	padding: var(--str-chat__spacing-2) var(--str-chat__spacing-4);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.str-chat__message
+	.str-chat__message-inner
+	.str-chat__message-bubble
+	.str-chat__message-text {
+	padding: unset;
+}
+
+.str-chat__message.str-chat__message--me
+	.str-chat__message-inner
+	.custom__message-author-name {
+	justify-content: flex-end;
+}
+
+.str-chat__message .str-chat__message-inner .custom__message-author-name {
+	justify-content: flex-start;
+}
+.str-chat__li--top
+	.str-chat__message
+	.str-chat__message-inner
+	.custom__message-author-name {
+	display: flex;
+}
+
+.str-chat__message.str-chat__message--me .str-chat__message-inner,
+.str-chat__quoted-message-preview.str-chat__message--me
+	.str-chat__message-inner {
+	grid-template-areas:
+		". author-name"
+		"options message-bubble"
+		"metadata message-bubble";
+
+	--str-chat__message-link-color: var(--str-chat__tertiary-surface-color);
+}
+
+.str-chat__message .str-chat__message-inner,
+.str-chat__quoted-message-preview .str-chat__message-inner {
+	grid-template-areas:
+		"author-name ."
+		"message-bubble options"
+		"message-bubble metadata";
+}
+
+.str-chat__message-metadata {
+	margin-block-start: unset !important;
+	align-items: flex-end !important;
+}
+
+.str-chat__message .str-chat__message-inner .str-chat__message-options,
+.str-chat__quoted-message-preview
+	.str-chat__message-inner
+	.str-chat__message-options {
+	width: unset;
+}
+
+.str-chat__message-reactions-host {
+	display: flex;
+	align-items: center;
+}
+
+.str-chat__message-reactions-container .str-chat__message-reactions {
+	gap: var(--str-chat__spacing-1_5);
+	margin-block-start: unset;
+	margin-block-end: unset;
+}
+
+.str-chat__message-reactions-button {
+	background-color: var(--str-chat__tertiary-surface-color);
+	border: none;
+
+	border-radius: var(--str-chat__message-reaction-border-radius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.3rem 0.6rem;
+	cursor: pointer;
+}
+
+.str-chat__message-reactions-button .str-chat__message-action-icon {
+	height: 15px;
+	width: 15px;
+	fill: var(--str-chat__text-low-emphasis-color);
+}
